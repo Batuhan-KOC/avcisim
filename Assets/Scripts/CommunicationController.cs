@@ -12,9 +12,7 @@ public class CommunicationController : MonoBehaviour
     public static event EnvironmentSignal stop_environment;
 
     public delegate void SimulationSignal();
-    public static event SimulationSignal simulation_started_signal_received;
-    public static event SimulationSignal simulation_stopped_signal_received;
-    public static event SimulationSignal simulation_initialized_signal_received;
+    // Removed duplicate event declarations for simulation_started_signal_received, simulation_stopped_signal_received, simulation_initialized_signal_received
 
     public delegate void drone_position_updated_signal(float lat, float lon, float alt, float roll, float pitch, float yaw);
     public static event drone_position_updated_signal drone_position_updated;

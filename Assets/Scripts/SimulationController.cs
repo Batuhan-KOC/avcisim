@@ -15,9 +15,6 @@ public class SimulationController : MonoBehaviour
         CommunicationController.start_environment += start_environment_signal_received;
         CommunicationController.stop_environment += stop_environment_signal_received;
         CommunicationController.drone_position_updated += drone_position_updated_signal_received;
-        CommunicationController.simulation_started_signal_received += simulation_started_signal_received;
-        CommunicationController.simulation_stopped_signal_received += simulation_stopped_signal_received;
-        CommunicationController.simulation_initialized_signal_received += simulation_initialized_signal_received;
     }
 
     void OnDisable()
@@ -25,9 +22,6 @@ public class SimulationController : MonoBehaviour
         CommunicationController.start_environment -= start_environment_signal_received;
         CommunicationController.stop_environment -= stop_environment_signal_received;
         CommunicationController.drone_position_updated -= drone_position_updated_signal_received;
-        CommunicationController.simulation_started_signal_received -= simulation_started_signal_received;
-        CommunicationController.simulation_stopped_signal_received -= simulation_stopped_signal_received;
-        CommunicationController.simulation_initialized_signal_received -= simulation_initialized_signal_received;
     }
 
     void Start()
